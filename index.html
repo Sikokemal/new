@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Болашақтың Демалыс Қалашығы - Қазалы</title>
+    <style>
+        :root {
+  --color-white: rgba(255, 255, 255, 1);
+  --color-black: rgba(0, 0, 0, 1);
+  --color-cream-50: rgba(252, 252, 249, 1);
+  --color-cream-100: rgba(255, 255, 253, 1);
+  --color-gray-200: rgba(245, 245, 245, 1);
+  --color-gray-300: rgba(167, 169, 169, 1);
+  --color-gray-400: rgba(119, 124, 124, 1);
+  --color-slate-500: rgba(98, 108, 113, 1);
+  --color-brown-600: rgba(94, 82, 64, 1);
+  --color-charcoal-700: rgba(31, 33, 33, 1);
+  --color-charcoal-800: rgba(38, 40, 40, 1);
+  --color-slate-900: rgba(19, 52, 59, 1);
+  --color-teal-300: rgba(50, 184, 198, 1);
+  --color-teal-400: rgba(45, 166, 178, 1);
+  --color-teal-500: rgba(33, 128, 141, 1);
+  --color-teal-600: rgba(29, 116, 128, 1);
+  --color-teal-700: rgba(26, 104, 115, 1);
+  --color-teal-800: rgba(41, 150, 161, 1);
+  --color-red-400: rgba(255, 84, 89, 1);
+  --color-red-500: rgba(192, 21, 47, 1);
+  --color-orange-400: rgba(230, 129, 97, 1);
+  --color-orange-500: rgba(168, 75, 47, 1);
+
+  --color-brown-600-rgb: 94, 82, 64;
+  --color-teal-500-rgb: 33, 128, 141;
+  --color-slate-900-rgb: 19, 52, 59;
+  --color-slate-500-rgb: 98, 108, 113;
+
+  --color-bg-1: rgba(59, 130, 246, 0.08);
+  --color-bg-2: rgba(245, 158, 11, 0.08);
+  --color-bg-3: rgba(34, 197, 94, 0.08);
+  --color-bg-4: rgba(239, 68, 68, 0.08);
+
+  --color-background: var(--color-cream-50);
+  --color-surface: var(--color-cream-100);
+  --color-text: var(--color-slate-900);
+  --color-text-secondary: var(--color-slate-500);
+  --color-primary: var(--color-teal-500);
+  --color-primary-hover: var(--color-teal-600);
+  --color-primary-active: var(--color-teal-700);
+  --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
+
+  --font-family-base: "FKGroteskNeue", "Geist", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-size-base: 14px;
+  --font-size-lg: 16px;
+  --font-size-xl: 18px;
+  --font-size-2xl: 20px;
+  --font-size-3xl: 24px;
+  --font-size-4xl: 30px;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 550;
+  --font-weight-bold: 600;
+
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+
+  --radius-base: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.04), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+
+  --duration-normal: 250ms;
+  --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-gray-400-rgb: 119, 124, 124;
+    --color-teal-300-rgb: 50, 184, 198;
+    --color-gray-300-rgb: 167, 169, 169;
+    --color-gray-200-rgb: 245, 245, 245;
+
+    --color-bg-1: rgba(29, 78, 216, 0.15);
+    --color-bg-2: rgba(180, 83, 9, 0.15);
+    --color-bg-3: rgba(21, 128, 61, 0.15);
+    --color-bg-4: rgba(185, 28, 28, 0.15);
+
+    --color-background: var(--color-charcoal-700);
+    --color-surface: var(--color-charcoal-800);
+    --color-text: var(--color-gray-200);
+    --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
+    --color-primary: var(--color-teal-300);
+    --color-primary-hover: var(--color-teal-400);
+    --color-primary-active: var(--color-teal-800);
+    --color-border: rgba(var(--color-gray-400-rgb), 0.3);
+    --color-card-border: rgba(var(--color-gray-400-rgb), 0.2);
+  }
+}
+
+@font-face {
+  font-family: 'FKGroteskNeue';
+  src: url('https://r2cdn.perplexity.ai/fonts/FKGroteskNeue.woff2') format('woff2');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: var(--font-size-base);
+}
+
+body {
+    font-family: var(--font-family-base);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-sm);
+    z-index: 1000;
+    padding: var(--space-16) 0;
+    transition: all var(--duration-normal) var(--ease-standard);
+}
+
+@media (prefers-color-scheme: dark) {
+    .header {
+        background: rgba(38, 40, 40, 0.95);
+    }
+}
+
+.header-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 var(--space-24);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    gap: var(--space-32);
+}
+
+.nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+    transition: color var(--duration-normal) var(--ease-standard);
+    font-size: var(--font-size-base);
+}
+
+.nav a:hover {
+    color: var(--color-primary);
+}
+
+.hero {
+    margin-top: 70px;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #21808d 0%, #32b8c6 100%);
+    color: white;
+    padding: var(--space-32);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none"/><circle cx="50" cy="50" r="40" fill="rgba(255,255,255,0.03)"/></svg>');
+    opacity: 0.3;
+}
+
+.hero-content {
+    max-width: 900px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--space-24);
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-32);
+    opacity: 0.95;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: var(--space-16) var(--space-32);
+    background: white;
+    color: var(--color-teal-600);
+    font-weight: var(--font-weight-semibold);
+    text-decoration: none;
+    border-radius: var(--radius-lg);
+    transition: all var(--duration-normal) var(--ease-standard);
+    box-shadow: var(--shadow-md);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.section {
+    padding: 80px var(--space-24);
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+    margin-bottom: var(--space-16);
+    color: var(--color-text);
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    margin-bottom: 60px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-32);
+    margin-top: 40px;
+}
+
+.video-card {
+    background: var(--color-surface);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all var(--duration-normal) var(--ease-standard);
+    border: 1px solid var(--color-card-border);
+}
+
+.video-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-info {
+    padding: var(--space-20);
+}
+
+.video-title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text);
+    margin-bottom: var(--space-8);
+}
+
+.video-description {
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-24);
+    margin-top: 40px;
+}
+
+.facility-card {
+    background: var(--color-surface);
+    padding: var(--space-24);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    border: 1px solid var(--color-card-border);
+    transition: all var(--duration-normal) var(--ease-standard);
+}
+
+.facility-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.facility-icon {
+    font-size: 48px;
+    margin-bottom: var(--space-16);
+}
+
+.facility-name {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text);
+}
+
+.info-card {
+    background: var(--color-bg-1);
+    padding: var(--space-32);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--color-card-border);
+    margin-top: 40px;
+}
+
+.info-card h3 {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--space-16);
+    color: var(--color-text);
+}
+
+.info-card p {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+    margin-bottom: var(--space-16);
+}
+
+.safety-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-24);
+    margin-top: 40px;
+}
+
+.safety-item {
+    background: var(--color-surface);
+    padding: var(--space-24);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-card-border);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-16);
+}
+
+.safety-icon {
+    font-size: 32px;
+    flex-shrink: 0;
+}
+
+.safety-text {
+    flex: 1;
+}
+
+.safety-text h4 {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--space-8);
+    color: var(--color-text);
+}
+
+.safety-text p {
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+}
+
+.footer {
+    background: var(--color-surface);
+    padding: 60px var(--space-24);
+    text-align: center;
+    border-top: 1px solid var(--color-border);
+}
+
+.footer-content {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.footer h3 {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--space-16);
+    color: var(--color-text);
+}
+
+.footer p {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-8);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-24);
+    margin: var(--space-32) 0;
+}
+
+.social-links a {
+    font-size: 32px;
+    transition: transform var(--duration-normal) var(--ease-standard);
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+}
+
+.copyright {
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+    margin-top: var(--space-24);
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+    
+    .hero h1 {
+        font-size: 32px;
+    }
+    
+    .hero p {
+        font-size: var(--font-size-base);
+    }
+    
+    .section {
+        padding: 60px var(--space-16);
+    }
+    
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+        font-size: var(--font-size-2xl);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section:nth-child(odd) {
+    background: var(--color-background);
+}
+
+.section:nth-child(even) {
+    background: var(--color-surface);
+}
+    </style>
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="#home" class="logo">Қазалы Қалашығы</a>
+            <nav class="nav">
+                <a href="#home">Басты бет</a>
+                <a href="#videos">Видео галерея</a>
+                <a href="#plan">Қала жоспары</a>
+                <a href="#safety">Қауіпсіздік</a>
+                <a href="#contact">Байланыс</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Қазалы қаласындағы болашақтың демалыс кешені</h1>
+            <p>Бассейндер, саябақтар, волейбол алаңдары, спорттық және ойын алаңдары</p>
+            <a href="#videos" class="cta-button">Толығырақ танысу</a>
+        </div>
+    </section>
+
+    <section class="section" id="videos">
+        <h2 class="section-title">Видео Галерея - Демалыс Орындары</h2>
+        <p class="section-subtitle">Біздің заманауи демалыс кешенінің барлық мүмкіндіктерімен танысыңыз</p>
+        
+    <div class="video-grid">
+  <div class="modern-card">
+    <div class="card-media">
+      <video width="100%" height="220" controls poster="image.jpg" style="border-radius:12px;">
+        <source src="new.mp4" type="video/mp4">
+        Сіздің браузеріңіз видеоны қолдамайды.
+      </video>
+    </div>
+    <div class="card-info">
+      <h3 class="card-title">Бассейн</h3>
+      <p class="card-desc">Заманауи бассейн кешені</p>
+      <span class="card-meta">Табиғи саябақтар мен демалыс аймақтары</span>
+    </div>
+  </div>
+  
+  <div class="modern-card">
+    <div class="card-media">
+      <video width="100%" height="220" controls poster="image.jpg" style="border-radius:12px;">
+        <source src="park.mp4" type="video/mp4">
+        Сіздің браузеріңіз видеоны қолдамайды.
+      </video>
+    </div>
+    <div class="card-info">
+      <h3 class="card-title">Саябақ пен көңіл көтеру орны</h3>
+      <p class="card-desc">Табиғи саябақтар мен демалыс аймақтары</p>
+    </div>
+  </div>
+  
+  <div class="modern-card">
+    <div class="card-media">
+      <video width="100%" height="220" controls poster="image.jpg" style="border-radius:12px;">
+        <source src="volleyball.mp4" type="video/mp4">
+        Сіздің браузеріңіз видеоны қолдамайды.
+      </video>
+    </div>
+    <div class="card-info">
+      <h3 class="card-title">Волейбол алаңы</h3>
+      <p class="card-desc">Кәсіби волейбол ойын алаңдары</p>
+    </div>
+  </div>
+  
+  <div class="modern-card">
+    <div class="card-media">
+      <video width="100%" height="220" controls poster="image.jpg" style="border-radius:12px;">
+        <source src="sport.mp4" type="video/mp4">
+        Сіздің браузеріңіз видеоны қолдамайды.
+      </video>
+    </div>
+    <div class="card-info">
+      <h3 class="card-title">Спорттық және ойын алаңдары</h3>
+      <p class="card-desc">Балалар мен жасөспірімдерге арналған алаңдар</p>
+    </div>
+  </div>
+</div>
+
+    </section>
+
+    <section class="section" id="plan">
+        <h2 class="section-title">Қала Жоспары</h2>
+        <p class="section-subtitle">Біздің демалыс қалашығында бар мүмкіндіктер мен қызметтер</p>
+        
+        <div class="facilities-grid">
+            <div class="facility-card fade-in">
+                <div class="facility-icon">🏊</div>
+                <div class="facility-name">Бассейндер</div>
+            </div>
+
+            <div class="facility-card fade-in" style="animation-delay: 0.05s">
+                <div class="facility-icon">🌳</div>
+                <div class="facility-name">Саябақтар</div>
+            </div>
+
+            <div class="facility-card fade-in" style="animation-delay: 0.1s">
+                <div class="facility-icon">🏐</div>
+                <div class="facility-name">Волейбол алаңдары</div>
+            </div>
+
+            <div class="facility-card fade-in" style="animation-delay: 0.15s">
+                <div class="facility-icon">⚽</div>
+                <div class="facility-name">Спорттық алаңдар</div>
+            </div>
+
+            <div class="facility-card fade-in" style="animation-delay: 0.2s">
+                <div class="facility-icon">🎮</div>
+                <div class="facility-name">Ойын алаңдары</div>
+            </div>
+
+            <div class="facility-card fade-in" style="animation-delay: 0.25s">
+                <div class="facility-icon">🏘️</div>
+                <div class="facility-name">Тұрғын үйлер</div>
+            </div>
+
+            <div class="facility-card fade-in" style="animation-delay: 0.3s">
+                <div class="facility-icon">📚</div>
+                <div class="facility-name">Оқушылар үйі</div>
+            </div>
+
+            <div class="facility-card fade-in" style="animation-delay: 0.35s">
+                <div class="facility-icon">🎭</div>
+                <div class="facility-name">Мәдениет үйі</div>
+            </div>
+        </div>
+
+        <div class="info-card fade-in">
+            <h3>Орналасқан Жері</h3>
+            <p><strong>Қазалы қаласында жасалынған</strong></p>
+            <p>Қала жол торабының бойында орналасқан, сол себепті туристік маңызы өте зор. Біздің демалыс кешені стратегиялық тұрғыдан ыңғайлы орналасқан және барлық қажетті инфрақұрылыммен жабдықталған.</p>
+        </div>
+    </section>
+
+    <section class="section" id="safety">
+        <h2 class="section-title">Қауіпсіздік Шаралары</h2>
+        <p class="section-subtitle">Барлық төтенше жағдайлар алдын алу қарастырылған</p>
+        
+        <div class="safety-features">
+            <div class="safety-item fade-in">
+                <div class="safety-icon">🚨</div>
+                <div class="safety-text">
+                    <h4>Төтенше жағдай жүйесі</h4>
+                    <p>24/7 мониторинг және жедел жауап беру қызметі</p>
+                </div>
+            </div>
+
+            <div class="safety-item fade-in" style="animation-delay: 0.1s">
+                <div class="safety-icon">🏥</div>
+                <div class="safety-text">
+                    <h4>Медициналық қызмет</h4>
+                    <p>Алғашқы медициналық көмек орталығы</p>
+                </div>
+            </div>
+
+            <div class="safety-item fade-in" style="animation-delay: 0.2s">
+                <div class="safety-icon">🔒</div>
+                <div class="safety-text">
+                    <h4>Қауіпсіздік қызметі</h4>
+                    <p>Кәсіби қауіпсіздік қызметкерлері және бейнебақылау</p>
+                </div>
+            </div>
+
+            <div class="safety-item fade-in" style="animation-delay: 0.3s">
+                <div class="safety-icon">🚒</div>
+                <div class="safety-text">
+                    <h4>Өрт қауіпсіздігі</h4>
+                    <p>Заманауи өрт сөндіру жүйелері</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="contact">
+        <div class="footer-content">
+            <h3>Байланыс</h3>
+            <p>Қазалы қаласындағы болашақтың демалыс кешені</p>
+            <p>Қазалы қаласы, Қазақстан</p>
+            
+            <div class="social-links">
+                <a href="#" title="Facebook">📘</a>
+                <a href="#" title="Instagram">📷</a>
+                <a href="#" title="YouTube">📹</a>
+                <a href="#" title="Telegram">✈️</a>
+            </div>
+            
+            <p class="copyright">© 2025 Қазалы Демалыс Қалашығы. Барлық құқықтар қорғалған.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Header scroll effect
+        let lastScroll = 0;
+        const header = document.getElementById('header');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                header.style.padding = '12px 0';
+                header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.padding = '16px 0';
+                header.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.04)';
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 70;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
